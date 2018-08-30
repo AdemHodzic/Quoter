@@ -4,6 +4,7 @@ import { MnFullpageModule } from 'ngx-fullpage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MaterialComponentsModule } from './material-components/material-components.module';
 import { FormsModule } from '@angular/forms'
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -15,6 +16,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     MnFullpageModule.forRoot(),
     MaterialComponentsModule
 

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Quote } from './quote';
+import { QuotesService} from './quotes.service';
+import {catchError} from 'rxjs/operators';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,14 +10,17 @@ import { Quote } from './quote';
 })
 export class AppComponent {
   title = 'app';
-  genres = ['motivational', 'education', 'design', 'literary', 'poetry', 'gonzo', 'philosophical'];
+  genres = ['motivational', 'education', 'design', 'literacy', 'poetry', 'gonzo', 'philosophical'];
   quote: Quote = {
     content: '',
     author: '',
     genre: this.genres[0]
   };
 
+  constructor(private service: QuotesService) {}
+
   submit() {
-    console.log('Quote is: \n ', this.quote);
+    this.service.addQuote(this.quote)
+      .subscribe(data => console.log(data));
   }
 }
