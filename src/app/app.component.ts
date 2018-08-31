@@ -16,6 +16,7 @@ export class AppComponent {
     author: '',
     genre: this.genres[0]
   };
+  footerText = `No Copyright ${ (new Date()).getFullYear()}`;
 
   constructor(private service: QuotesService) {}
 

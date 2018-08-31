@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MaterialComponentsModule } from './material-components/material-components.module';
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule} from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 
@@ -15,11 +16,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     FormsModule,
     HttpClientModule,
     MnFullpageModule.forRoot(),
     MaterialComponentsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
