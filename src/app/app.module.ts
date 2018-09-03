@@ -8,10 +8,14 @@ import { HttpClientModule} from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
+import { MainFormComponent } from './components/main-form/main-form.component';
+import { FromSuccessComponent } from './components/from-success/from-success.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainFormComponent,
+    FromSuccessComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +26,7 @@ import { AppComponent } from './app.component';
     MnFullpageModule.forRoot(),
     MaterialComponentsModule
   ],
+  entryComponents: [MainFormComponent, FromSuccessComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

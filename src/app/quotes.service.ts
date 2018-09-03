@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class QuotesService {
 
-  url = 'https://jenny-api.herokuapp.com/data';
+  url = 'http://localhost:3000/data';
 
   httpOptions = {
   headers: new HttpHeaders({
