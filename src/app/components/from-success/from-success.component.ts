@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventService } from '../../services/event.service';
 
 @Component({
   selector: 'app-from-success',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FromSuccessComponent implements OnInit {
 
-  constructor() { }
+  constructor(private eventService: EventService) { }
 
   ngOnInit() {
+  }
+
+  goBack() {
+    this.eventService.returnToMainForm();
   }
 
 }

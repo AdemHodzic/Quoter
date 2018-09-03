@@ -20,6 +20,8 @@ export class AppComponent implements OnInit {
   constructor(public componentFactoryResolver: ComponentFactoryResolver, public event: EventService) {
     this.event.success$
       .subscribe(data => this.success());
+    this.event.return$
+      .subscribe(data => this.returnToMain());
   }
 
   ngOnInit() {
@@ -35,5 +37,9 @@ export class AppComponent implements OnInit {
 
   success() {
     this.changeComponent('form-success');
+  }
+
+  returnToMain() {
+    this.changeComponent('main-form');
   }
 }
